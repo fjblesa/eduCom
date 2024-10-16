@@ -21,7 +21,7 @@ public class DefaultUserRepository implements UserRepository {
 
   @Override
   public UserDTO findByUserName(String userName) {
-    return userMapper.userToUserDTO(userRepository.findByUserName(userName).orElseThrow());
+    return userMapper.userToUserDTO(userRepository.findByUserName(userName).orElse(null));
   }
 
   @Override
