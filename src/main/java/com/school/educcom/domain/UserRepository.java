@@ -6,7 +6,7 @@ public interface UserRepository {
 
   UserDTO findById(Long userId);
 
-  UserDTO findByUsername(String userName);
+  UserDTO findByUserName(String userName);
 
   UserDTO save(UserDTO user);
 }

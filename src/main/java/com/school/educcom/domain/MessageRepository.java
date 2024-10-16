@@ -7,7 +7,7 @@ public interface MessageRepository {
 
   MessageDTO save(MessageDTO message);
 
-  List<MessageDTO> findByReceiverId(Long userId);
+//  List<MessageDTO> findByReceiverId(Long userId);
 
-  List<MessageDTO> findBySenderId(Long userId);
+//  List<MessageDTO> findBySenderId(Long userId);
 }

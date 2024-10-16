@@ -1,2 +1,25 @@
-INSERT INTO innersoul.users_web (username, name, first_name, second_name, password, email, full_name) VALUES
-('pepito_grillo', 'Pepito', 'Grillo', 'Ruidoso', '1234', 'pepito@abc.com', 'Pepito Grillo Ruidoso');
+-- Inserción de datos en la tabla 'user'
+INSERT INTO users (username, name, surname, surname2, password, role) VALUES
+('johndoe', 'John', 'Doe', 'Smith', 'password123', 'STUDENT'),
+('janedoe', 'Jane', 'Doe', 'Johnson', 'password456', 'TEACHER'),
+('marksmith', 'Mark', 'Smith', NULL, 'password789', 'TEACHER');
+
+-- Inserción de datos en la tabla 'subject'
+INSERT INTO subject (name) VALUES 
+('Mathematics'),
+('Physics'),
+('Chemistry');
+
+-- Inserción de datos en la tabla 'message'
+INSERT INTO message (content, sender_id, receiver_id, creation_date, read) VALUES 
+('Hello, how are you?', 1, 2, NOW(), FALSE),
+('Reminder: Homework due tomorrow', 2, 1, NOW(), FALSE),
+('What time is the meeting?', 1, 3, NOW(), FALSE);
+
+-- Inserción de datos en la tabla 'user_subjects'
+INSERT INTO user_subjects (user_id, subject_id) VALUES 
+(1, 1),  -- John Doe está en Matemáticas
+(1, 2),  -- John Doe está en Física
+(2, 1),  -- Jane Doe enseña Matemáticas
+(2, 2),  -- Jane Doe enseña Física
+(3, 2);  -- Mark Smith enseña Física

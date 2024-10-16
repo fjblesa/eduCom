@@ -20,15 +20,15 @@ public class DefaultMessageRepository implements MessageRepository {
         jpaMessageRepository.save(messageDTOToMessage(message)));
   }
 
-  @Override
-  public List<MessageDTO> findByReceiverId(Long userId) {
-    return messagesToMessagesDTO(jpaMessageRepository.findByReceiverId(userId));
-  }
+//  @Override
+//  public List<MessageDTO> findByReceiverId(Long userId) {
+//    return messagesToMessagesDTO(jpaMessageRepository.findByReceiverId(userId));
+//  }
 
-  @Override
-  public List<MessageDTO> findBySenderId(Long userId) {
-    return messagesToMessagesDTO(jpaMessageRepository.findBySenderId(userId));
-  }
+//  @Override
+//  public List<MessageDTO> findBySenderId(Long userId) {
+//    return messagesToMessagesDTO(jpaMessageRepository.findBySenderId(userId));
+//  }
 
   private List<Message> messagesDTOToMessages(List<MessageDTO> messages) {
     return messages.stream().map(message ->

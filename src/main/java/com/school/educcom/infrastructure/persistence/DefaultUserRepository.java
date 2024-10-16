@@ -21,10 +21,10 @@ public class DefaultUserRepository implements UserRepository {
   }
 
   @Override
-  public UserDTO findByUsername(String userName) {
+  public UserDTO findByUserName(String userName) {
     return userToUserDTO(
         userRepository
-            .findByUsername(userName)
+            .findByUserName(userName)
             .orElseThrow());
   }
 

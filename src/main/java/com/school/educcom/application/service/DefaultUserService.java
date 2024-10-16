@@ -18,7 +18,7 @@ public class DefaultUserService implements UserService{
 
   @Override
   public UserDTO findUserByUserName(String userName) {
-    return userRepository.findByUsername(userName);
+    return userRepository.findByUserName(userName);
   }
 
   @Override
@@ -30,7 +30,7 @@ public class DefaultUserService implements UserService{
   }
 
   private void validateIfExist(String userName) {
-    UserDTO userDTO = userRepository.findByUsername(userName);
+    UserDTO userDTO = userRepository.findByUserName(userName);
     if (userDTO == null) {
       return;
     }

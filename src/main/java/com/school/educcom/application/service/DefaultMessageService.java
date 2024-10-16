@@ -28,12 +28,14 @@ public class DefaultMessageService implements MessageService{
   // Get messages received by the user
   @Override
   public List<MessageDTO> getReceivedMessages(Long userId) {
-    return messageRepository.findByReceiverId(userId);
+//    return messageRepository.findByReceiverId(userId);
+    return null;
   }
 
   // Get messages sent by the user
   @Override
   public List<MessageDTO> getSentMessages(Long userId) {
-    return messageRepository.findBySenderId(userId);
+    return null;
+//    return messageRepository.findBySenderId(userId);
   }
 }

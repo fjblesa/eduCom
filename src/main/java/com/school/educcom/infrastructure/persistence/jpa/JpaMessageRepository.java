@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface JpaMessageRepository extends CrudRepository<Message, Long> {
-  List<Message> findBySenderId(Long senderId);
+//  List<Message> findBySenderId(Long senderId);
 
-  List<Message> findByReceiverId(Long receiverId);
+//  List<Message> findByReceiverId(Long receiverId);
 }
