@@ -6,7 +6,7 @@ public interface UserService {
 
   UserDTO findById(Long userId);
 
-  UserDTO findUserByUserName(String userName);
+  UserDTO findByUserName(String userName);
 
   UserDTO registerUser(UserDTO userDTO);
 }

@@ -17,14 +17,14 @@ public class DefaultUserService implements UserService{
   }
 
   @Override
-  public UserDTO findUserByUserName(String userName) {
+  public UserDTO findByUserName(String userName) {
     return userRepository.findByUserName(userName);
   }
 
   @Override
   public UserDTO registerUser(UserDTO userDTO) {
     validateIfExist(userDTO.getUserName());
-    //    userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+//        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
     userDTO.setUserName(createUserName(userDTO));
     return userRepository.save(userDTO);
   }

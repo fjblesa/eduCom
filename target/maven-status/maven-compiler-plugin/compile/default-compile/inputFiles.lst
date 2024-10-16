@@ -11,6 +11,7 @@
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/domain/model/UserDTO.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/config/PersistenceConfig.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/config/WebConfig.java
+/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/controllers/AuthController.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/controllers/MessageController.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/DefaultMessageRepository.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/DefaultUserRepository.java
