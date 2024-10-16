@@ -25,8 +25,4 @@ public class UserDTO {
   private String password;
 
   private Role role; // Enum for role (STUDENT or TEACHER)
-
-  private List<SubjectDTO> subjects;
-  private List<MessageDTO> sentMessages;
-  private List<MessageDTO> receivedMessages;
 }

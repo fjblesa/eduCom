@@ -22,6 +22,11 @@ public class DefaultUserService implements UserService{
   }
 
   @Override
+  public UserDTO findByUserNameAndPassword(String userName, String password) {
+    return userRepository.findByUserNameAndPassword(userName, password);
+  }
+
+  @Override
   public UserDTO registerUser(UserDTO userDTO) {
     validateIfExist(userDTO.getUserName());
 //        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));

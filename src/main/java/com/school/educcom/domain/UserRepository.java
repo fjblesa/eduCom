@@ -9,4 +9,6 @@ public interface UserRepository {
   UserDTO findByUserName(String userName);
 
   UserDTO save(UserDTO user);
+
+  UserDTO findByUserNameAndPassword(String userName, String password);
 }

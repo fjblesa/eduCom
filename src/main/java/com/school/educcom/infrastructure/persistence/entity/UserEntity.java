@@ -58,10 +58,4 @@ public class UserEntity {
       joinColumns = @JoinColumn(name = "user_id"),
       inverseJoinColumns = @JoinColumn(name = "subject_id"))
   private List<SubjectEntity> subjects = new ArrayList<>();
-
-  @OneToMany
-  private List<MessageEntity> sentMessages = new ArrayList<>();
-
-  @OneToMany
-  private List<MessageEntity> receivedMessages = new ArrayList<>();
 }

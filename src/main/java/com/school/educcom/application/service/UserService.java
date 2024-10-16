@@ -8,5 +8,7 @@ public interface UserService {
 
   UserDTO findByUserName(String userName);
 
+  UserDTO findByUserNameAndPassword(String userName, String password);
+
   UserDTO registerUser(UserDTO userDTO);
 }
