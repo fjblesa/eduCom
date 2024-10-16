@@ -2,7 +2,6 @@ package com.school.educcom.domain.model;
 
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,8 +13,8 @@ import lombok.Setter;
 public class MessageDTO {
   private Long id;
   private String content;
-//  private Long senderId;
-//  private Long receiverId;
+  private Long senderId;
+  private Long receiverId;
   private LocalDateTime creationDate;
   private Boolean read;
 

@@ -3,7 +3,6 @@ package com.school.educcom.application.service;
 import com.school.educcom.domain.MessageRepository;
 import com.school.educcom.domain.model.MessageDTO;
 import com.school.educcom.domain.model.UserDTO;
-import java.time.LocalDateTime;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,14 +27,12 @@ public class DefaultMessageService implements MessageService{
   // Get messages received by the user
   @Override
   public List<MessageDTO> getReceivedMessages(Long userId) {
-//    return messageRepository.findByReceiverId(userId);
-    return null;
+    return messageRepository.findByReceiverId(userId);
   }
 
   // Get messages sent by the user
   @Override
   public List<MessageDTO> getSentMessages(Long userId) {
-    return null;
-//    return messageRepository.findBySenderId(userId);
+    return messageRepository.findBySenderId(userId);
   }
 }

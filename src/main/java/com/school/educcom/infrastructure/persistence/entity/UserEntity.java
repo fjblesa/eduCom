@@ -6,8 +6,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -43,16 +49,16 @@ public class UserEntity {
 //  @Enumerated(EnumType.STRING)
 //  private Role role;
 
-//  @ManyToMany
-//  @JoinTable(
-//      name = "user_subjects",
-//      joinColumns = @JoinColumn(name = "user_id"),
-//      inverseJoinColumns = @JoinColumn(name = "subject_id"))
-//  private List<Subject> subjects = new ArrayList<>();
-//
-//  @OneToMany
-//  private List<Message> sentMessages = new ArrayList<>();
-//
-//  @OneToMany
-//  private List<Message> receivedMessages = new ArrayList<>();
+  @ManyToMany
+  @JoinTable(
+      name = "user_subjects",
+      joinColumns = @JoinColumn(name = "user_id"),
+      inverseJoinColumns = @JoinColumn(name = "subject_id"))
+  private List<SubjectEntity> subjects = new ArrayList<>();
+
+  @OneToMany
+  private List<MessageEntity> sentMessages = new ArrayList<>();
+
+  @OneToMany
+  private List<MessageEntity> receivedMessages = new ArrayList<>();
 }
