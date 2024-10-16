@@ -1,0 +1,13 @@
+DROP SCHEMA IF EXISTS innersoul CASCADE;
+CREATE SCHEMA IF NOT EXISTS innersoul;
+
+CREATE TABLE IF NOT EXISTS innersoul.users_web (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    second_name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    full_name VARCHAR(255) NOT NULL
+);
