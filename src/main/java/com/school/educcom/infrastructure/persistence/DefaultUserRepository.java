@@ -2,7 +2,7 @@ package com.school.educcom.infrastructure.persistence;
 
 import com.school.educcom.domain.UserRepository;
 import com.school.educcom.domain.model.UserDTO;
-import com.school.educcom.infrastructure.persistence.entity.User;
+import com.school.educcom.infrastructure.persistence.entity.UserEntity;
 import com.school.educcom.infrastructure.persistence.jpa.JpaUserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -33,12 +33,18 @@ public class DefaultUserRepository implements UserRepository {
     return userToUserDTO(userRepository.save(userDTOToUser(userDTO)));
   }
 
-  private UserDTO userToUserDTO(User user) {
+  private UserDTO userToUserDTO(UserEntity user) {
     return new UserDTO(
         user.getId(), user.getUserName(), user.getName(), user.getSurName(), user.getSurName2(), user.getPassword());
   }
 
-  private User userDTOToUser(UserDTO user) {
-    return new User(user.getId(), user.getUserName(), user.getName(), user.getSurName(), user.getSurName2(), user.getPassword());
+  private UserEntity userDTOToUser(UserDTO user) {
+    return new UserEntity(
+        user.getId(),
+        user.getUserName(),
+        user.getName(),
+        user.getSurName(),
+        user.getSurName2(),
+        user.getPassword());
   }
 }

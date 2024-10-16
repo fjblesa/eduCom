@@ -1,11 +1,11 @@
 package com.school.educcom.infrastructure.persistence.jpa;
 
-import com.school.educcom.infrastructure.persistence.entity.User;
+import com.school.educcom.infrastructure.persistence.entity.UserEntity;
 import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface JpaUserRepository extends CrudRepository<User, Long> {
-  Optional<User> findByUserName(String username);
+public interface JpaUserRepository extends CrudRepository<UserEntity, Long> {
+  Optional<UserEntity> findByUserName(String username);
 }

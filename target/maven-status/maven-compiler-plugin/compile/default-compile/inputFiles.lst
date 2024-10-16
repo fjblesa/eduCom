@@ -13,9 +13,11 @@
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/controllers/MessageController.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/DefaultMessageRepository.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/DefaultUserRepository.java
-/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/entity/Message.java
-/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/entity/Subject.java
-/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/entity/User.java
+/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/entity/MessageEntity.java
+/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/entity/SubjectEntity.java
+/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/entity/UserEntity.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/jpa/JpaMessageRepository.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/jpa/JpaSubjectRepository.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/jpa/JpaUserRepository.java
+/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/mapper/MessageMapper.java
+/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/persistence/mapper/UsersMapper.java
