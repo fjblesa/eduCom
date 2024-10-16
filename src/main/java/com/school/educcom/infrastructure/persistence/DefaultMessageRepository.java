@@ -12,23 +12,21 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class DefaultMessageRepository implements MessageRepository {
 
-  private final MessageMapper messageMapper;
-  private final JpaMessageRepository jpaMessageRepository;
+    private final MessageMapper messageMapper;
+    private final JpaMessageRepository jpaMessageRepository;
 
-  @Override
-  public MessageDTO save(MessageDTO message) {
-    return messageMapper.messageToMessageDTO(
-        jpaMessageRepository.save(
-            messageMapper.messageDTOToMessage(message)));
-  }
+    @Override
+    public MessageDTO save(MessageDTO message) {
+	    return messageMapper.messageToMessageDTO(jpaMessageRepository.save(messageMapper.messageDTOToMessage(message)));
+    }
 
-  @Override
-  public List<MessageDTO> findByReceiverId(Long userId) {
-    return messageMapper.messagesToMessagesDTO(jpaMessageRepository.findByReceiverId(userId));
-  }
+    @Override
+    public List<MessageDTO> findByReceiverId(Long userId) {
+	    return messageMapper.messagesToMessagesDTO(jpaMessageRepository.findByReceiverId(userId));
+    }
 
-  @Override
-  public List<MessageDTO> findBySenderId(Long userId) {
-    return messageMapper.messagesToMessagesDTO(jpaMessageRepository.findBySenderId(userId));
-  }
+    @Override
+    public List<MessageDTO> findBySenderId(Long userId) {
+	    return messageMapper.messagesToMessagesDTO(jpaMessageRepository.findBySenderId(userId));
+    }
 }

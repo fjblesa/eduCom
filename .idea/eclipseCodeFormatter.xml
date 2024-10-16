@@ -3,9 +3,9 @@
   <component name="EclipseCodeFormatterProjectSettings">
     <option name="projectSpecificProfile">
       <ProjectSpecificProfile>
+        <option name="configType" value="JAVA_CONVENTIONS" />
         <option name="formatter" value="ECLIPSE" />
         <option name="pathToConfigFileJava" value="$PROJECT_DIR$/../../../../idea/goaigua-formatter.xml" />
-        <option name="selectedJavaProfile" value="goaigua" />
       </ProjectSpecificProfile>
     </option>
   </component>

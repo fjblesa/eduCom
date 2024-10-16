@@ -1,5 +1,6 @@
 package com.school.educcom.domain.model;
 
+import com.school.educcom.domain.enums.Role;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,7 +24,7 @@ public class UserDTO {
 
   private String password;
 
-//  private Role role; // Enum for role (STUDENT or TEACHER)
+  private Role role; // Enum for role (STUDENT or TEACHER)
 
   private List<SubjectDTO> subjects;
   private List<MessageDTO> sentMessages;

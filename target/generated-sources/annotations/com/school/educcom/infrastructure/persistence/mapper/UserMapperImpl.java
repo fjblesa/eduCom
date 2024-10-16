@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-16T11:44:52+0200",
+    date = "2024-10-16T13:38:12+0200",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.4 (Azul Systems, Inc.)"
 )
 @Component
@@ -33,6 +33,7 @@ public class UserMapperImpl implements UserMapper {
         userEntity.setSurName( userDTO.getSurName() );
         userEntity.setSurName2( userDTO.getSurName2() );
         userEntity.setPassword( userDTO.getPassword() );
+        userEntity.setRole( userDTO.getRole() );
         userEntity.setSubjects( subjectDTOListToSubjectEntityList( userDTO.getSubjects() ) );
         userEntity.setSentMessages( messageDTOListToMessageEntityList( userDTO.getSentMessages() ) );
         userEntity.setReceivedMessages( messageDTOListToMessageEntityList( userDTO.getReceivedMessages() ) );
@@ -54,6 +55,7 @@ public class UserMapperImpl implements UserMapper {
         userDTO.setSurName( user.getSurName() );
         userDTO.setSurName2( user.getSurName2() );
         userDTO.setPassword( user.getPassword() );
+        userDTO.setRole( user.getRole() );
         userDTO.setSubjects( subjectEntityListToSubjectDTOList( user.getSubjects() ) );
         userDTO.setSentMessages( messageEntityListToMessageDTOList( user.getSentMessages() ) );
         userDTO.setReceivedMessages( messageEntityListToMessageDTOList( user.getReceivedMessages() ) );

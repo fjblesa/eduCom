@@ -13,6 +13,7 @@ com/school/educcom/domain/MessageRepository.class
 com/school/educcom/infrastructure/persistence/jpa/JpaSubjectRepository.class
 com/school/educcom/infrastructure/persistence/jpa/JpaMessageRepository.class
 com/school/educcom/domain/model/UserDTO.class
+com/school/educcom/domain/enums/Role.class
 com/school/educcom/infrastructure/controllers/MessageController.class
 com/school/educcom/infrastructure/persistence/entity/SubjectEntity.class
 com/school/educcom/application/service/DefaultUserService.class

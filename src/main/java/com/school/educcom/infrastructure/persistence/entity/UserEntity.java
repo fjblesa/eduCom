@@ -3,6 +3,8 @@ package com.school.educcom.infrastructure.persistence.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,6 +14,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+import com.school.educcom.domain.enums.Role;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -46,8 +49,8 @@ public class UserEntity {
   @Column(nullable = false)
   private String password;
 
-//  @Enumerated(EnumType.STRING)
-//  private Role role;
+  @Enumerated(EnumType.STRING)
+  private Role role;
 
   @ManyToMany
   @JoinTable(
