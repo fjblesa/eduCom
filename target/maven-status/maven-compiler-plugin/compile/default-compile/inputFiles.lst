@@ -8,6 +8,7 @@
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/domain/enums/Role.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/domain/model/LoginRequest.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/domain/model/MessageDTO.java
+/home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/domain/model/SendRequest.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/domain/model/SubjectDTO.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/domain/model/UserDTO.java
 /home/jablero/Downloads/FP/Backend/Bueno/github/eduCom/src/main/java/com/school/educcom/infrastructure/config/PersistenceConfig.java

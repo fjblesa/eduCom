@@ -2,6 +2,7 @@ package com.school.educcom.application.service;
 
 import com.school.educcom.domain.MessageRepository;
 import com.school.educcom.domain.model.MessageDTO;
+import com.school.educcom.domain.model.SendRequest;
 import com.school.educcom.domain.model.UserDTO;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -15,12 +16,15 @@ public class DefaultMessageService implements MessageService{
   private final MessageRepository messageRepository;
 
   @Override
-  public MessageDTO sendMessage(String content, Long senderId, Long receiverId) {
-    UserDTO sender = userService.findById(senderId);
-    UserDTO receiver = userService.findById(receiverId);
+  public MessageDTO sendMessage(SendRequest message) {
+    UserDTO sender = userService.findById(message.getSenderId());
+    UserDTO receiver = userService.findById(message.getReceiverId());
+    if(sender == null || receiver == null){
+      throw new RuntimeException("Receiver or Sender not Found");
+    }
 
     MessageDTO messageDTO =
-        new MessageDTO(content);
+        new MessageDTO(message.getContent(), sender.getId(), receiver.getId());
     return messageRepository.save(messageDTO);
   }
 

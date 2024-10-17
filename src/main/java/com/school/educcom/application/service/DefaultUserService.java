@@ -29,7 +29,6 @@ public class DefaultUserService implements UserService{
   @Override
   public UserDTO registerUser(UserDTO userDTO) {
     validateIfExist(userDTO.getUserName());
-    userDTO.setUserName(createUserName(userDTO));
     return userRepository.save(userDTO);
   }
 
@@ -39,9 +38,5 @@ public class DefaultUserService implements UserService{
       return;
     }
     throw new RuntimeException("The user already exist");
-  }
-
-  private String createUserName(UserDTO userDTO) {
-    return userDTO.getName() + userDTO.getSurName() + userDTO.getSurName2();
   }
 }

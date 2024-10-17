@@ -18,7 +18,9 @@ public class MessageDTO {
   private LocalDateTime creationDate;
   private Boolean read;
 
-  public MessageDTO(String content) {
+  public MessageDTO(String content, Long senderId, Long receiverId) {
     this.content = content;
+    this.senderId = senderId;
+    this.receiverId = receiverId;
   }
 }
