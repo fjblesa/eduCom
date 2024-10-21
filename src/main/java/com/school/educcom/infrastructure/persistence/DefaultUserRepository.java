@@ -1,9 +1,11 @@
 package com.school.educcom.infrastructure.persistence;
 
 import com.school.educcom.domain.UserRepository;
+import com.school.educcom.domain.enums.Role;
 import com.school.educcom.domain.model.UserDTO;
 import com.school.educcom.infrastructure.persistence.jpa.JpaUserRepository;
 import com.school.educcom.infrastructure.persistence.mapper.UserMapper;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -32,5 +34,10 @@ public class DefaultUserRepository implements UserRepository {
   @Override
   public UserDTO findByUserNameAndPassword(String userName, String password) {
     return userMapper.userToUserDTO(userRepository.findByUserNameAndPassword(userName, password));
+  }
+
+  @Override
+  public List<UserDTO> findByRole(Role student) {
+    return userMapper.usersToUsersDto(userRepository.findByRole(student));
   }
 }

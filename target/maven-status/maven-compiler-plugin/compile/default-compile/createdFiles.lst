@@ -21,6 +21,7 @@ com/school/educcom/domain/model/SubjectDTO.class
 com/school/educcom/Application.class
 com/school/educcom/domain/model/LoginRequest.class
 com/school/educcom/infrastructure/controllers/AuthController.class
+com/school/educcom/infrastructure/controllers/UserController.class
 com/school/educcom/application/service/DefaultMessageService.class
 com/school/educcom/infrastructure/config/PersistenceConfig.class
 com/school/educcom/domain/model/SendRequest.class

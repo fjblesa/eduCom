@@ -1,8 +1,4 @@
 
-
-Osrc/main/java/com/school/educcom/infrastructure/persistence/entity/Subject.java,c/e/ced3b269839870b930e4f71747e651d2a30fd9be
-
-Osrc/main/java/com/school/educcom/infrastructure/persistence/entity/Message.java,5/b/5b8bf9883734f242abeb2757a0a62d0764762b44
 n
 >src/main/java/com/school/educcom/domain/MessageRepository.java,7/5/75f7ea4feae1bfa7dcd0989444a7c7fe11f37ec5
 ‚
@@ -31,8 +27,6 @@ Vsrc/main/java/com/school/educcom/infrastructure/persistence/DefaultUserReposito
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 }
 Msrc/main/java/com/school/educcom/infrastructure/config/PersistenceConfig.java,d/3/d39528b61de298d89f34a86a38efb8c767a41ed7
-|
-Lsrc/main/java/com/school/educcom/infrastructure/persistence/entity/User.java,6/1/6186f4060981f4f604225a5f7bd04f61320774c0
 j
 :src/main/java/com/school/educcom/domain/model/UserDTO.java,b/7/b75b9d8e22529e0f4ec4ec69a250e75332d4e0f8
 m
@@ -43,3 +37,26 @@ m
 Lsrc/main/java/com/school/educcom/application/service/DefaultUserService.java,7/d/7ddc54ca1f56cba422dc62174642bd943b0e6b11
 
 Osrc/main/java/com/school/educcom/application/service/DefaultMessageService.java,d/c/dcb99801de3b9ff1d4e62a19817366445d6f4ab5
+a
+1src/main/java/com/school/educcom/Application.java,4/2/420956aac5cac2ab7c90112172a4254ce7225572
+g
+7src/main/java/com/school/educcom/domain/enums/Role.java,9/c/9cafe88e248872eb42ebe3db07756a46f70a84dd
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+…
+Usrc/main/java/com/school/educcom/infrastructure/persistence/entity/MessageEntity.java,3/c/3cbb423eab3c54b08ec3db3b5548d8c0a1ea7e2c
+u
+Esrc/main/java/com/school/educcom/infrastructure/config/WebConfig.java,0/3/037111972a56c2dcd0bcba4ba560db605ffca280
+o
+?src/main/java/com/school/educcom/domain/model/LoginRequest.java,9/4/94fe6551066635dea90e924608d12b2e632c7768
+‚
+Rsrc/main/java/com/school/educcom/infrastructure/persistence/entity/UserEntity.java,b/0/b082ba72edb152a70420168c20b00ea5296d6f95
+…
+Usrc/main/java/com/school/educcom/infrastructure/persistence/entity/SubjectEntity.java,7/3/735384a8a9699056b4db673cc45ab8d59f9b958b
+n
+>src/main/java/com/school/educcom/domain/model/SendRequest.java,1/1/11b6b7f57bf974b0137c058ada7ab969359ec6ac
+
+Osrc/main/java/com/school/educcom/infrastructure/controllers/AuthController.java,7/0/70a8ad0a23b175af48e0cbeb90ee209dcd87f93f
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302

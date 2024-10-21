@@ -1,7 +1,9 @@
 package com.school.educcom.application.service;
 
 import com.school.educcom.domain.UserRepository;
+import com.school.educcom.domain.enums.Role;
 import com.school.educcom.domain.model.UserDTO;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,11 @@ public class DefaultUserService implements UserService{
   public UserDTO registerUser(UserDTO userDTO) {
     validateIfExist(userDTO.getUserName());
     return userRepository.save(userDTO);
+  }
+
+  @Override
+  public List<UserDTO> findByRole(Role student) {
+    return userRepository.findByRole(student);
   }
 
   private void validateIfExist(String userName) {

@@ -1,6 +1,8 @@
 package com.school.educcom.domain;
 
+import com.school.educcom.domain.enums.Role;
 import com.school.educcom.domain.model.UserDTO;
+import java.util.List;
 
 public interface UserRepository {
 
@@ -11,4 +13,6 @@ public interface UserRepository {
   UserDTO save(UserDTO user);
 
   UserDTO findByUserNameAndPassword(String userName, String password);
+
+  List<UserDTO> findByRole(Role student);
 }
