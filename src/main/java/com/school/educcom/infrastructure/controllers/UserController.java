@@ -38,4 +38,9 @@ public class UserController {
   public UserDTO updateUser(@RequestBody UserDTO userRequest) {
     return userService.updateUser(userRequest);
   }
+
+  @GetMapping("/user-name")
+  public String getUserName(@RequestParam Long userId){
+    return userService.getUserName(userId);
+  }
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @AllArgsConstructor
 public class DefaultUserService implements UserService{
 
+  public static final String SPACE = " ";
   private final UserRepository userRepository;
 
   @Override
@@ -43,6 +44,18 @@ public class DefaultUserService implements UserService{
   @Override
   public UserDTO updateUser(UserDTO userRequest) {
     return userRepository.updateUser(userRequest);
+  }
+
+  @Override
+  public String getUserName(Long userId) {
+    return createResponse(userRepository.findById(userId));
+  }
+
+  private String createResponse(UserDTO userDTO) {
+    String name = userDTO.getName();
+    String surName = userDTO.getSurName();
+    String surName2 = userDTO.getSurName2();
+    return name + SPACE + surName + SPACE + surName2;
   }
 
   private void validateIfExist(String userName) {

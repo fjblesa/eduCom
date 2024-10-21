@@ -17,4 +17,6 @@ public interface UserService {
   List<UserDTO> findByRole(Role student);
 
   UserDTO updateUser(UserDTO userRequest);
+
+  String getUserName(Long userId);
 }
