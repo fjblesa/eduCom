@@ -97,6 +97,36 @@
 			"response": []
 		},
 		{
+			"name": "Update User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"userName\": \"usuario123\",\n  \"name\": \"Juan\",\n  \"surName\": \"Pérez\",\n  \"surName2\": \"García\",\n  \"password\": \"secreto123\",\n  \"role\": \"STUDENT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Received",
 			"request": {
 				"method": "GET",

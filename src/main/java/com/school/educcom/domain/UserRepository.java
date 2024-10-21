@@ -15,4 +15,6 @@ public interface UserRepository {
   UserDTO findByUserNameAndPassword(String userName, String password);
 
   List<UserDTO> findByRole(Role student);
+
+  UserDTO updateUser(UserDTO userRequest);
 }

@@ -40,4 +40,9 @@ public class DefaultUserRepository implements UserRepository {
   public List<UserDTO> findByRole(Role student) {
     return userMapper.usersToUsersDto(userRepository.findByRole(student));
   }
+
+  @Override
+  public UserDTO updateUser(UserDTO userRequest) {
+    return userMapper.userToUserDTO(userRepository.save(userMapper.userDTOToUser(userRequest)));
+  }
 }

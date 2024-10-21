@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/user")
-@Tag(
-    name = "User controller",
-    description = "This controller its to get users By id or for role")
+@Tag(name = "User controller", description = "This controller its to get users By id or for role")
 public class UserController {
 
   private final UserService userService;
@@ -34,5 +32,10 @@ public class UserController {
   @GetMapping("/students")
   public List<UserDTO> getStudentUsers() {
     return userService.findByRole(STUDENT);
+  }
+
+  @PostMapping("/")
+  public UserDTO updateUser(@RequestBody UserDTO userRequest) {
+    return userService.updateUser(userRequest);
   }
 }

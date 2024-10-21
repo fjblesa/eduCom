@@ -6,6 +6,7 @@ import com.school.educcom.domain.model.UserDTO;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 @AllArgsConstructor
@@ -37,6 +38,11 @@ public class DefaultUserService implements UserService{
   @Override
   public List<UserDTO> findByRole(Role student) {
     return userRepository.findByRole(student);
+  }
+
+  @Override
+  public UserDTO updateUser(UserDTO userRequest) {
+    return userRepository.updateUser(userRequest);
   }
 
   private void validateIfExist(String userName) {

@@ -15,4 +15,6 @@ public interface UserService {
   UserDTO registerUser(UserDTO userDTO);
 
   List<UserDTO> findByRole(Role student);
+
+  UserDTO updateUser(UserDTO userRequest);
 }
