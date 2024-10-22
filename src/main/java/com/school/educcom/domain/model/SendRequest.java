@@ -12,5 +12,7 @@ import lombok.Setter;
 public class SendRequest {
   private String content;
   private Long receiverId;
+  private String receiverName;
   private Long senderId;
+  private String senderName;
 }

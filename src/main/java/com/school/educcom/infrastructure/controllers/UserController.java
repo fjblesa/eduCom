@@ -34,7 +34,7 @@ public class UserController {
     return userService.findByRole(STUDENT);
   }
 
-  @PostMapping("/")
+  @PutMapping("/")
   public UserDTO updateUser(@RequestBody UserDTO userRequest) {
     return userService.updateUser(userRequest);
   }

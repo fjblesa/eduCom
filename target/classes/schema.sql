@@ -23,6 +23,8 @@ CREATE TABLE message (
     content TEXT NOT NULL,
     sender_id BIGINT NOT NULL,
     receiver_id BIGINT NOT NULL,
+    receiver_name TEXT NOT NULL,
+    sender_name TEXT NOT NULL,
     creation_date TIMESTAMP NOT NULL,
     read BOOLEAN NOT NULL DEFAULT FALSE,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

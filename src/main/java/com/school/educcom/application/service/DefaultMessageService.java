@@ -24,7 +24,7 @@ public class DefaultMessageService implements MessageService{
     }
 
     MessageDTO messageDTO =
-        new MessageDTO(message.getContent(), sender.getId(), receiver.getId());
+        new MessageDTO(message.getContent(), sender.getId(), receiver.getId(),message.getReceiverName(), message.getSenderName());
     return messageRepository.save(messageDTO);
   }
 

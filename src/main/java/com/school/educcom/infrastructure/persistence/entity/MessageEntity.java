@@ -39,6 +39,12 @@ public class MessageEntity {
     @JoinColumn(name = "receiver_id", nullable = false)
     private UserEntity receiver;
 
+    @Column(name = "receiver_name")
+    private String receiverName;
+
+    @Column(name = "sender_name")
+    private String senderName;
+
     @Column(name = "creation_date", nullable = false)
     private LocalDateTime creationDate;
 

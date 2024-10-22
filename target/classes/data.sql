@@ -11,10 +11,10 @@ INSERT INTO subject (name) VALUES
 ('Chemistry');
 
 -- Inserción de datos en la tabla 'message'
-INSERT INTO message (content, sender_id, receiver_id, creation_date, read) VALUES 
-('Hello, how are you?', 1, 2, NOW(), FALSE),
-('Reminder: Homework due tomorrow', 2, 1, NOW(), FALSE),
-('What time is the meeting?', 1, 3, NOW(), FALSE);
+INSERT INTO message (content, sender_id, receiver_id, sender_name, receiver_name, creation_date, read) VALUES
+('Hello, how are you?', 1, 2,'John Doe Smith', 'John Doe Johnson', NOW(), FALSE),
+('Reminder: Homework due tomorrow', 2, 1,'John Doe Johnson', 'John Doe Smith', NOW(), FALSE),
+('What time is the meeting?', 1, 3, 'John Doe Smith', 'Mark Smith',  NOW(), FALSE);
 
 -- Inserción de datos en la tabla 'user_subjects'
 INSERT INTO user_subjects (user_id, subject_id) VALUES 

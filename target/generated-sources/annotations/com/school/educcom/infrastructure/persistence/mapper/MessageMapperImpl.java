@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-21T12:40:03+0200",
+    date = "2024-10-22T16:18:00+0200",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.4 (Azul Systems, Inc.)"
 )
 @Component
@@ -28,6 +28,8 @@ public class MessageMapperImpl implements MessageMapper {
         messageDTO.setReceiverId( messageEntityReceiverId( messageEntity ) );
         messageDTO.setId( messageEntity.getId() );
         messageDTO.setContent( messageEntity.getContent() );
+        messageDTO.setReceiverName( messageEntity.getReceiverName() );
+        messageDTO.setSenderName( messageEntity.getSenderName() );
         messageDTO.setCreationDate( messageEntity.getCreationDate() );
         messageDTO.setRead( messageEntity.getRead() );
 
@@ -60,6 +62,8 @@ public class MessageMapperImpl implements MessageMapper {
         messageEntity.setReceiver( messageDTOToUserEntity1( message ) );
         messageEntity.setId( message.getId() );
         messageEntity.setContent( message.getContent() );
+        messageEntity.setReceiverName( message.getReceiverName() );
+        messageEntity.setSenderName( message.getSenderName() );
         messageEntity.setCreationDate( message.getCreationDate() );
         messageEntity.setRead( message.getRead() );
 
