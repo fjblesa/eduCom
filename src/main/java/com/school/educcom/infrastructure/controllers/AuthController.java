@@ -3,7 +3,10 @@ package com.school.educcom.infrastructure.controllers;
 import com.school.educcom.application.service.UserService;
 import com.school.educcom.domain.model.LoginRequest;
 import com.school.educcom.domain.model.UserDTO;
+import java.util.HashMap;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +21,16 @@ public class AuthController {
 
   @PostMapping("/register")
   public ResponseEntity<UserDTO> register(@RequestBody UserDTO user) {
-    return ResponseEntity.ok(userService.registerUser(user));
+    try {
+      return ResponseEntity.ok(userService.registerUser(user));
+    } catch (RuntimeException e) {
+      // Create a custom error response
+      Map<String, String> errorResponse = new HashMap<>();
+      errorResponse.put("status", HttpStatus.BAD_REQUEST.toString());
+      errorResponse.put("message", e.getMessage());
+
+      return new ResponseEntity (errorResponse, HttpStatus.BAD_REQUEST);
+    }
   }
 
   @PostMapping("/login")
