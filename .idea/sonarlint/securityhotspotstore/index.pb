@@ -60,3 +60,5 @@ Osrc/main/java/com/school/educcom/infrastructure/controllers/AuthController.java
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+
+Osrc/main/java/com/school/educcom/infrastructure/controllers/UserController.java,e/3/e355104a8828a28c6d69efb8eb7aeec3ecf92181
